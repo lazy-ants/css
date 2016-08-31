@@ -1,4 +1,6 @@
-# Airbnb CSS / Sass Styleguide
+# Lazy Ants CSS / Sass Styleguide
+
+base of [airnbn style guide](https://github.com/airbnb/css)
 
 *A mostly reasonable approach to CSS and Sass*
 
@@ -32,8 +34,8 @@ A “rule declaration” is the name given to a selector (or a group of selector
 
 ```css
 .listing {
-  font-size: 18px;
-  line-height: 1.2;
+    font-size: 18px;
+    line-height: 1.2;
 }
 ```
 
@@ -43,11 +45,11 @@ In a rule declaration, “selectors” are the bits that determine which element
 
 ```css
 .my-element-class {
-  /* ... */
+    /* ... */
 }
 
 [aria-hidden] {
-  /* ... */
+    /* ... */
 }
 ```
 
@@ -57,8 +59,8 @@ Finally, properties are what give the selected elements of a rule declaration th
 
 ```css
 /* some selector */ {
-  background: #f1f1f1;
-  color: #333;
+    background: #f1f1f1;
+    color: #333;
 }
 ```
 
@@ -66,7 +68,7 @@ Finally, properties are what give the selected elements of a rule declaration th
 
 ### Formatting
 
-* Use soft tabs (2 spaces) for indentation
+* Use soft tabs (4 spaces) for indentation
 * Prefer dashes over camelCasing in class names.
   - Underscores and PascalCasing are okay if you are using BEM (see [OOCSS and BEM](#oocss-and-bem) below).
 * Do not use ID selectors
@@ -80,10 +82,10 @@ Finally, properties are what give the selected elements of a rule declaration th
 
 ```css
 .avatar{
-    border-radius:50%;
-    border:2px solid white; }
+  border-radius:50%;
+  border:2px solid white; }
 .no, .nope, .not_good {
-    // ...
+  // ...
 }
 #lol-no {
   // ...
@@ -94,14 +96,14 @@ Finally, properties are what give the selected elements of a rule declaration th
 
 ```css
 .avatar {
-  border-radius: 50%;
-  border: 2px solid white;
+    border-radius: 50%;
+    border: 2px solid white;
 }
 
 .one,
 .selector,
 .per-line {
-  // ...
+    // ...
 }
 ```
 
@@ -139,17 +141,17 @@ We recommend a variant of BEM with PascalCased “blocks”, which works particu
 ```jsx
 // ListingCard.jsx
 function ListingCard() {
-  return (
-    <article class="ListingCard ListingCard--featured">
+    return (
+        <article class="ListingCard ListingCard--featured">
 
-      <h1 class="ListingCard__title">Adorable 2BR in the sunny Mission</h1>
+            <h1 class="ListingCard__title">Adorable 2BR in the sunny Mission</h1>
 
-      <div class="ListingCard__content">
-        <p>Vestibulum id ligula porta felis euismod semper.</p>
-      </div>
+            <div class="ListingCard__content">
+                <p>Vestibulum id ligula porta felis euismod semper.</p>
+            </div>
 
-    </article>
-  );
+        </article>
+    );
 }
 ```
 
@@ -189,7 +191,7 @@ Use `0` instead of `none` to specify that a style has no border.
 
 ```css
 .foo {
-  border: none;
+    border: none;
 }
 ```
 
@@ -197,7 +199,7 @@ Use `0` instead of `none` to specify that a style has no border.
 
 ```css
 .foo {
-  border: 0;
+    border: 0;
 }
 ```
 
@@ -216,9 +218,9 @@ Use `0` instead of `none` to specify that a style has no border.
 
     ```scss
     .btn-green {
-      background: green;
-      font-weight: bold;
-      // ...
+        background: green;
+        font-weight: bold;
+        // ...
     }
     ```
 
@@ -228,10 +230,10 @@ Use `0` instead of `none` to specify that a style has no border.
 
     ```scss
     .btn-green {
-      background: green;
-      font-weight: bold;
-      @include transition(background 0.5s ease);
-      // ...
+        background: green;
+        font-weight: bold;
+        @include transition(background 0.5s ease);
+        // ...
     }
     ```
 
@@ -241,13 +243,13 @@ Use `0` instead of `none` to specify that a style has no border.
 
     ```scss
     .btn {
-      background: green;
-      font-weight: bold;
-      @include transition(background 0.5s ease);
+        background: green;
+        font-weight: bold;
+        @include transition(background 0.5s ease);
 
-      .icon {
-        margin-right: 10px;
-      }
+        .icon {
+            margin-right: 10px;
+        }
     }
     ```
 
@@ -269,11 +271,11 @@ Mixins should be used to DRY up your code, add clarity, or abstract complexity--
 
 ```scss
 .page-container {
-  .content {
-    .profile {
-      // STOP!
+    .content {
+        .profile {
+        // STOP!
+        }
     }
-  }
 }
 ```
 
